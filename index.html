@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birth Day chirgiaaaa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-pink-50 text-pink-800 font-sans flex flex-col items-center justify-center min-h-screen p-4"
+  >
+    <!-- Kontainer -->
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-md text-center">
+      <h1 class="text-3xl font-bold text-pink-600 fade-in">
+        🎉 Surprise for You! 🎉
+      </h1>
+      <p class="text-pink-500 mt-4 fade-in">
+        Klik tombol di bawah untuk membuka hadiah:
+      </p>
+
+      <!-- Tombol -->
+      <button
+        id="revealButton"
+        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg mt-6 fade-in"
+      >
+        Buka Hadiah
+      </button>
+
+      <!-- Video (Disembunyikan Awalnya) -->
+      <div id="videoContainer" class="mt-6 hidden fade-in">
+        <!-- <video
+          controls
+          class="w-full rounded-lg border-2 border-pink-200 shadow-sm"
+        >
+          <source
+            src="https://drive.google.com/uc?export=download&id=15W0o-HvFCHp6Ag7pnuRVM8nGx1U7Y5UL"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video> -->
+        <iframe
+          class="w-full rounded-lg border-2 border-pink-200 shadow-sm"
+          src="https://drive.google.com/file/d/15W0o-HvFCHp6Ag7pnuRVM8nGx1U7Y5UL/preview"
+          width="620"
+          height="200"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+        <p class="text-pink-400 mt-4">Hope you like it! ❤️</p>
+      </div>
+    </div>
+
+    <footer class="text-pink-300 text-sm mt-6 fade-in">
+      Made with 💖 for someone special.
+    </footer>
+
+    <script>
+      // JavaScript untuk Menampilkan Video saat Tombol Diklik
+      document
+        .getElementById("revealButton")
+        .addEventListener("click", function () {
+          const videoContainer = document.getElementById("videoContainer");
+          videoContainer.classList.remove("hidden"); // Tampilkan video
+          this.classList.add("hidden"); // Sembunyikan tombol
+        });
+    </script>
+  </body>
+</html>
